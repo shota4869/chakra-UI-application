@@ -3,14 +3,14 @@ import { useCallback } from "react";
 
 type Props = {
   title: string;
-  status: "info" | "warnig" | "success" | "error";
+  status: "info" | "warning" | "success" | "error";
 };
 
 export const useMessage = () => {
   const toast = useToast();
 
-  const showMessage = useCallback((Props) => {
-    const { title, status } = Props;
+  const showMessage = useCallback((props: Props) => {
+    const { title, status } = props;
     toast({
       position: "top",
       duration: 2000,
